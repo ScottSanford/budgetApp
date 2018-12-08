@@ -37,12 +37,22 @@ export class BudgetTrackerService {
 
     return {
       daily: this.getRemainingDailyBalance(remainingDaysInMonth),
-      weekly: 'weekly'
+      weekly: this.getRemainingWeeklyBalance(remainingDaysInMonth)
     }
   }
 
   getRemainingDailyBalance(remainingDays) {
     const remainingBalance = this.getRemainingBudgetBalance() / remainingDays
     return parseFloat(remainingBalance.toFixed(2))
+  }
+
+  getRemainingWeeklyBalance(remainingDays) {
+    if (remainingDays >= 7) {
+      const weeksLeft = remainingDays / 7
+      const remainingBalance = this.getRemainingBudgetBalance() / weeksLeft
+      return parseFloat(remainingBalance.toFixed(2))
+    } else {
+      return this.getRemainingDailyBalance(remainingDays)
+    }
   }
 }

@@ -13,6 +13,7 @@ export class TrackerPage implements OnInit {
 	protected incomeValue: number
 	protected remainingBudgetTotal: number
 	protected remainingDailyBalance: number
+	protected remainingWeeklyBalance: number
 	protected showIncomeNumber: boolean
 
 	constructor(
@@ -44,6 +45,7 @@ export class TrackerPage implements OnInit {
 
     // Daily Time Balances
     this.remainingDailyBalance = this.budgetTrackerService.getRemainingTimeBalance().daily
+    this.remainingWeeklyBalance = this.budgetTrackerService.getRemainingTimeBalance().weekly
 	}
 
 }
