@@ -18,6 +18,10 @@ export class BudgetsPage {
     private navParams: NavParams) {
   }
 
+  addBudget() {
+    this.budgets.push({name: 'My New Budget'})
+  }
+
   onGoToTracker(budgetName: string) {
     this.navCtrl.push(TrackerPage, {budgetName})
   }

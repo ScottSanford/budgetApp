@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BudgetsPage } from '../pages/budgets/budgets';
 import { TrackerPage } from '../pages/tracker/tracker';
+import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TrackerPage } from '../pages/tracker/tracker';
   providers: [
     StatusBar,
     SplashScreen,
+    BudgetTrackerService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
