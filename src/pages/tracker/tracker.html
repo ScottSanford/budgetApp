@@ -1,55 +1,63 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>{{budgetName}}</ion-title>
-  </ion-navbar>
-
+	<ion-navbar>
+		<ion-title>{{budgetName}}</ion-title>
+	</ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <h2>Income</h2>
-    <ion-item>
-      <ion-input
-        type="number"
-        placeholder="Income"
-        [(ngModel)]="incomeValue"
-        (ngModelChange)="incomeValue = convertToNumber($event)"
-        (keyup.enter)="onEnterIncome()"></ion-input>
-    </ion-item>
-    <div *ngIf="showIncomeNumber">{{incomeValue}}</div>
+  	<ion-list>
+    	<h2>Income</h2>
+		<ion-item>
+		<ion-input
+			type="number"
+			placeholder="Income"
+			[(ngModel)]="incomeValue"
+			(ngModelChange)="incomeValue = convertToNumber($event)"
+			(keyup.enter)="onEnterIncome()"></ion-input>
+		</ion-item>
+    	<div *ngIf="showIncomeNumber">{{incomeValue}}</div>
 
-    <h2>Add Expense</h2>
-    <ion-item>
-        <ion-input
-          type="text"
-          placeholder="Expense Name"
-          [(ngModel)]="expenseName"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-input
-            type="number"
-            placeholder="Amount"
-            [(ngModel)]="expenseValue"
-            (ngModelChange)="expenseValue = convertToNumber($event)"></ion-input>
-        </ion-item>
+		<h2>Add Expense</h2>
+		<ion-item>
+			<ion-input
+			type="text"
+			placeholder="Expense Name"
+			[(ngModel)]="expenseName"></ion-input>
+		</ion-item>
+			<ion-item>
+				<ion-input
+					type="number"
+					placeholder="Amount"
+					[(ngModel)]="expenseValue"
+					(ngModelChange)="expenseValue = convertToNumber($event)"></ion-input>
+			</ion-item>
 
         <button ion-button (click)="onAddExpense({name: expenseName, amount: expenseValue})">Add Expense</button>
   </ion-list>
 
-  <ion-card>
-      <ion-card-header>
-        Total
-      </ion-card-header>
-
-      <ion-card-content *ngIf="showIncomeNumber">
-        ${{remainingBudgetTotal}}
-      </ion-card-content>
-
-    </ion-card>
+  	<ion-card>
+      	<ion-card-header>
+        	Remaining Balance
+      	</ion-card-header>
+      	<ion-card-content *ngIf="showIncomeNumber">
+       		${{remainingBudgetTotal}}
+      	</ion-card-content>
+  	</ion-card>
+  	<ion-card>
+      	<ion-card-header>
+        	Remaining Weekly Balance
+      	</ion-card-header>
+      	<ion-card-content *ngIf="showIncomeNumber">
+       		${{remainingBudgetTotal}}
+      	</ion-card-content>
+  	</ion-card>
+  	<ion-card>
+      	<ion-card-header>
+        	Remaining Daily Balance
+      	</ion-card-header>
+      	<ion-card-content *ngIf="showIncomeNumber">
+       		${{remainingDailyBalance}}
+      	</ion-card-content>
+  	</ion-card>
 </ion-content>
-
-<ion-footer padding>
-  <p>The Footer</p>
-</ion-footer>
