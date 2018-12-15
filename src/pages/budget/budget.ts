@@ -4,9 +4,9 @@ import { TrackerPage } from '../tracker/tracker';
 
 @Component({
   selector: 'page-budgets',
-  templateUrl: 'budgets.html',
+  templateUrl: 'budget.html',
 })
-export class BudgetsPage {
+export class BudgetPage {
   budgets: any = [
     {name: 'December Budget'},
     {name: 'Janurary Budget'},

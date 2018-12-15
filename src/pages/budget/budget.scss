@@ -1,0 +1,66 @@
+.page-budget {
+  background-color: #D9E2EC;
+}
+
+.header {
+	background-image: linear-gradient(to bottom, #3EBD93, #0C6B58);
+	color: #F0F4F8;
+	height: 35%;
+
+	&__title {
+		font-size: 20px;
+		font-weight: bold;
+		padding-top: 25px;
+	}
+}
+
+.balance {
+	margin-top: 40px;
+
+	&__amount {
+		font-size: 48px;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+    	font-size: 14px;
+    	margin-top: 10px;
+    	text-transform: uppercase;
+  	}
+}
+
+.overview {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 7px 11px rgba(0, 0, 0, .25);
+	border-bottom: 10px solid #27AB83;
+	color: #102A43;
+	display: flex;
+	height: 125px;
+
+	&__remaining, &__daily {
+    display: flex;
+    flex: 50%;
+		flex-direction: column;
+    justify-content: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid #D9E2EC;
+    }
+	}
+
+	&__amount {
+		font-size: 36px;
+    font-weight: 600;
+
+    sup {
+      font-size: 20px;
+    }
+	}
+
+	&__title {
+		color: #829AB1;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+}

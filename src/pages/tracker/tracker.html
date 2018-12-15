@@ -6,6 +6,37 @@
 
 
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+              <ion-card>
+                  <ion-card-header>Monthly</ion-card-header>
+                  <ion-card-content *ngIf="showIncomeNumber">
+                     ${{remainingBudgetTotal}}
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+              <ion-card>
+                  <ion-card-header>Weekly</ion-card-header>
+                  <ion-card-content *ngIf="showIncomeNumber">
+                     ${{remainingWeeklyBalance}}
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+          <ion-col col-6>
+              <ion-card>
+                  <ion-card-header>Daily</ion-card-header>
+                  <ion-card-content *ngIf="showIncomeNumber">
+                     ${{remainingDailyBalance}}
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+
   	<ion-list>
     	<h2>Income</h2>
 		<ion-item>
@@ -36,28 +67,4 @@
         <button ion-button (click)="onAddExpense({name: expenseName, amount: expenseValue})">Add Expense</button>
   </ion-list>
 
-  	<ion-card>
-      	<ion-card-header>
-        	Remaining Balance
-      	</ion-card-header>
-      	<ion-card-content *ngIf="showIncomeNumber">
-       		${{remainingBudgetTotal}}
-      	</ion-card-content>
-  	</ion-card>
-  	<ion-card>
-      	<ion-card-header>
-        	Remaining Weekly Balance
-      	</ion-card-header>
-      	<ion-card-content *ngIf="showIncomeNumber">
-       		${{remainingWeeklyBalance}}
-      	</ion-card-content>
-  	</ion-card>
-  	<ion-card>
-      	<ion-card-header>
-        	Remaining Daily Balance
-      	</ion-card-header>
-      	<ion-card-content *ngIf="showIncomeNumber">
-       		${{remainingDailyBalance}}
-      	</ion-card-content>
-  	</ion-card>
 </ion-content>

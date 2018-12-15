@@ -7,7 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { BudgetsPage } from '../pages/budgets/budgets';
+import { BudgetPage } from '../pages/budget/budget';
 import { TrackerPage } from '../pages/tracker/tracker';
 import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
 
@@ -15,7 +15,7 @@ import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
   declarations: [
     MyApp,
     TabsPage,
-    BudgetsPage,
+    BudgetPage,
     TrackerPage
   ],
   imports: [
@@ -26,7 +26,7 @@ import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
   entryComponents: [
     MyApp,
     TabsPage,
-    BudgetsPage,
+    BudgetPage,
     TrackerPage
   ],
   providers: [
