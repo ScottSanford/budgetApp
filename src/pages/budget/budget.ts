@@ -30,4 +30,12 @@ export class BudgetPage {
     this.navCtrl.push(TrackerPage, {budget})
   }
 
+  getListBudget() {
+
+  }
+
+  getCategoriesBudget() {
+
+  }
+
 }

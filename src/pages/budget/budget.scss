@@ -64,3 +64,20 @@
 		text-transform: uppercase;
 	}
 }
+
+.budget-tabs {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 7px 11px rgba(0, 0, 0, .25);
+  display: flex;
+  font-weight: 600;
+  height: 40px;
+  justify-content: space-around;
+  margin: 100px 16px 0 16px;
+  text-transform: uppercase;
+
+  &__tab--selected {
+    // border: 1px solid #014D40;
+  }
+}

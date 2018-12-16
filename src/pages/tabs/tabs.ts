@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 import { BudgetPage } from '../budget/budget';
-import { TrackerPage } from '../tracker/tracker';
-// import { UserPage } from '../user/user';
+import { NewTransactionPage } from '../new-transaction/new-transaction';
+import { ProfilePage } from '../profile/profile';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
   tab1Root = BudgetPage;
-  tab2Root = TrackerPage;
-  tab3Root = TrackerPage;
+  tab2Root = NewTransactionPage;
+  tab3Root = ProfilePage;
 
   constructor() {
 

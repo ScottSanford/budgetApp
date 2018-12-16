@@ -1,11 +1,13 @@
 <ion-content class="page-budget">
   <div class="header">
     <div text-center class="header__title">December 2018</div>
+
     <div text-center class="balance">
       <div class="balance__amount">$1,850.<sup>25</sup></div>
       <div class="balance__subtitle">Balance</div>
     </div>
 
+    <!-- Remaining && Daily Budget Balance Component -->
     <div margin class="overview">
       <div class="overview__remaining">
         <div class="overview__amount" text-center>$500.<sup>25</sup></div>
@@ -16,5 +18,10 @@
         <div class="overview__title" text-center>Remaining</div>
       </div>
     </div>
+  </div>
+
+  <div class="budget-tabs">
+    <div class="budget-tabs__tab budget-tabs__tab--selected" (click)="getListBudget()">List</div>
+    <div class="budget-tabs__tab" (click)="getCategoriesBudget()">Categories</div>
   </div>
 </ion-content>

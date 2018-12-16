@@ -10,13 +10,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BudgetPage } from '../pages/budget/budget';
 import { TrackerPage } from '../pages/tracker/tracker';
 import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
+import { ProfilePage } from '../pages/profile/profile';
+import { NewTransactionPage } from '../pages/new-transaction/new-transaction';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     BudgetPage,
-    TrackerPage
+    TrackerPage,
+    ProfilePage,
+    NewTransactionPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
     MyApp,
     TabsPage,
     BudgetPage,
-    TrackerPage
+    TrackerPage,
+    ProfilePage,
+    NewTransactionPage
   ],
   providers: [
     StatusBar,
