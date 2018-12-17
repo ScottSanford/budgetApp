@@ -1,6 +1,6 @@
 <ion-content class="page-budget">
-  <div class="header">
-    <div text-center class="header__title">December 2018</div>
+  <div class="budget-header">
+    <div text-center class="budget-header__title">December 2018</div>
 
     <div text-center class="balance">
       <div class="balance__amount">$1,850.<sup>25</sup></div>
@@ -21,7 +21,14 @@
   </div>
 
   <div class="budget-tabs">
-    <div class="budget-tabs__tab budget-tabs__tab--selected" (click)="getListBudget()">List</div>
-    <div class="budget-tabs__tab" (click)="getCategoriesBudget()">Categories</div>
+    <div
+      class="budget-tabs__tab"
+      (click)="getBudgetListType('list')"
+      [ngClass]="status ? 'budget-tabs__tab--selected' : ''">List</div>
+    <div
+      class="budget-tabs__tab"
+      (click)="getBudgetListType('categories')"
+      [ngClass]="status ? '' : 'budget-tabs__tab--selected'"
+      >Categories</div>
   </div>
 </ion-content>

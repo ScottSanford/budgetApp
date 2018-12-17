@@ -12,6 +12,7 @@ export class BudgetPage {
     {name: 'Janurary Budget'},
     {name: 'Big Debt Payoff'}
   ]
+  protected status: boolean = false
 
   constructor(
     private navCtrl: NavController,
@@ -30,12 +31,12 @@ export class BudgetPage {
     this.navCtrl.push(TrackerPage, {budget})
   }
 
-  getListBudget() {
-
-  }
-
-  getCategoriesBudget() {
-
+  getBudgetListType(type) {
+    if (type === 'list') {
+      this.status = true
+    } else {
+      this.status = false
+    }
   }
 
 }

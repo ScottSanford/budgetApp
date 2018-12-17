@@ -2,7 +2,7 @@
   background-color: #D9E2EC;
 }
 
-.header {
+.budget-header {
 	background-image: linear-gradient(to bottom, #3EBD93, #0C6B58);
 	color: #F0F4F8;
 	height: 35%;
@@ -77,7 +77,24 @@
   margin: 100px 16px 0 16px;
   text-transform: uppercase;
 
+  &__tab {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 150px;
+  }
+
   &__tab--selected {
-    // border: 1px solid #014D40;
+    align-items: center;
+    background: #C6F7E2;
+    border: 1px solid #014D40;
+    border-radius: 40px;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    /* height: 30px; */
+    /* width: 137px; */
+    text-align: center;
   }
 }

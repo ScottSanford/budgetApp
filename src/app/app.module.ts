@@ -12,6 +12,7 @@ import { TrackerPage } from '../pages/tracker/tracker';
 import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
 import { ProfilePage } from '../pages/profile/profile';
 import { NewTransactionPage } from '../pages/new-transaction/new-transaction';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NewTransactionPage } from '../pages/new-transaction/new-transaction';
     StatusBar,
     SplashScreen,
     BudgetTrackerService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NativePageTransitions
   ]
 })
 export class AppModule {}
