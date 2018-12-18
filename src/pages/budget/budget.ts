@@ -3,40 +3,40 @@ import { NavController, NavParams } from 'ionic-angular';
 import { TrackerPage } from '../tracker/tracker';
 
 @Component({
-  selector: 'page-budgets',
-  templateUrl: 'budget.html',
+	selector: 'page-budgets',
+	templateUrl: 'budget.html',
 })
 export class BudgetPage {
-  budgets: any = [
-    {name: 'December Budget'},
-    {name: 'Janurary Budget'},
-    {name: 'Big Debt Payoff'}
-  ]
-  protected status: boolean = false
+	budgets: any = [
+		{name: 'December Budget'},
+		{name: 'Janurary Budget'},
+		{name: 'Big Debt Payoff'}
+	]
+  	protected status: boolean = false
 
-  constructor(
-    private navCtrl: NavController,
-    private navParams: NavParams) {
-  }
+	constructor(
+		private navCtrl: NavController,
+		private navParams: NavParams) {
+	}
 
-  addBudget() {
-    this.budgets.push({name: 'My New Budget'})
-  }
+	addBudget() {
+		this.budgets.push({name: 'My New Budget'})
+	}
 
-  onGoToTracker(budgetName: string) {
-    this.navCtrl.push(TrackerPage, {budgetName})
-  }
+	onGoToTracker(budgetName: string) {
+		this.navCtrl.push(TrackerPage, {budgetName})
+	}
 
-  budgetSelected(budget) {
-    this.navCtrl.push(TrackerPage, {budget})
-  }
+	budgetSelected(budget) {
+		this.navCtrl.push(TrackerPage, {budget})
+	}
 
-  getBudgetListType(type) {
-    if (type === 'list') {
-      this.status = true
-    } else {
-      this.status = false
-    }
-  }
+	getBudgetListType(type) {
+		if (type === 'list') {
+		this.status = true
+		} else {
+		this.status = false
+		}
+	}
 
 }
