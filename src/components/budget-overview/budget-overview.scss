@@ -1,0 +1,38 @@
+budget-overview {
+	.overview {
+		background: $color-white;
+		border-radius: $border-radius-sm;
+		box-shadow: $box-shadow-lg;
+		border-bottom: 1rem solid #27AB83;
+		color: $color-neutral-1;
+		display: flex;
+		height: 12.5rem;
+
+		&__remaining, &__daily {
+			display: flex;
+			flex: 50%;
+			flex-direction: column;
+			justify-content: center;
+
+			&:not(:last-child) {
+			border-right: 1px solid $color-neutral-9;
+			}
+		}
+
+		&__amount {
+			font-size: $fs-32;
+			font-weight: 600;
+
+			sup {
+			font-size: $fs-20;
+			}
+		}
+
+		&__title {
+			color: #829AB1;
+			font-size: $fs-12;
+			text-transform: uppercase;
+		}
+	}
+}
+

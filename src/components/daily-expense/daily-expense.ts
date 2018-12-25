@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'daily-expense',
   templateUrl: 'daily-expense.html'
 })
-export class DailyExpenseComponent implements OnInit{
+export class DailyExpenseComponent implements OnInit {
 
   @Input() expenses: Budget.DailyExpense[]
 

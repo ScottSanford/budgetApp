@@ -8,28 +8,12 @@
 		</div>
 
 		<!-- Remaining && Daily Budget Balance Component -->
-		<div margin class="overview">
-			<div class="overview__remaining">
-				<div class="overview__amount" text-center>$500.<sup>25</sup></div>
-				<div class="overview__title" text-center>Remaining</div>
-			</div>
-			<div class="overview__daily">
-				<div class="overview__amount" text-center>$20.<sup>30</sup></div>
-				<div class="overview__title" text-center>Daily</div>
-			</div>
-			</div>
+		<budget-overview></budget-overview>
 	</div>
 
 	<div class="budget-tabs">
-		<div
-		class="budget-tabs__tab"
-		(click)="getBudgetListType('list')"
-		[ngClass]="status ? 'budget-tabs__tab--selected' : ''">List</div>
-		<div
-		class="budget-tabs__tab"
-		(click)="getBudgetListType('categories')"
-		[ngClass]="status ? '' : 'budget-tabs__tab--selected'"
-		>Categories</div>
+		<div class="budget-tabs__tab" (click)="getBudgetListType('list')" [ngClass]="status ? 'budget-tabs__tab--selected' : ''">List</div>
+		<div class="budget-tabs__tab" (click)="getBudgetListType('categories')" [ngClass]="status ? '' : 'budget-tabs__tab--selected'">Categories</div>
 	</div>
 
 	<daily-expense [expenses]="dailyExpenses" *ngIf="status"></daily-expense>
