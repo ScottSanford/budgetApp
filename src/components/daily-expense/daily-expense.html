@@ -1,0 +1,17 @@
+<ion-card class="daily-budget" *ngFor="let e of expenses">
+	<ion-card-header class="daily-budget__header">
+	<div class="daily-budget__date">{{e.date | date: 'short'}}</div>
+	<div class="daily-budget__amount">{{e.sum}}</div>
+	</ion-card-header>
+
+	<ion-list>
+		<div ion-item class="daily-budget__item" *ngFor="let expense of e.expenses">
+			<ion-icon name="{{expense.categoryIcon}}" item-start></ion-icon>
+			<div class="daily-budget__item-details">
+				<div class="daily-budget__item-description">{{expense.name}}</div>
+				<div class="daily-budget__item-amount"
+					[ngClass]="expense.category === 'expense' ? 'daily-budget__item--danger' : 'daily-budget__item--success'">${{expense.amount}}</div>
+			</div>
+		</div>
+	</ion-list>
+</ion-card>

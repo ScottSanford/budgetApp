@@ -13,6 +13,7 @@ import { BudgetTrackerService } from '../pages/services/budget-tracker.service';
 import { ProfilePage } from '../pages/profile/profile';
 import { NewTransactionPage } from '../pages/new-transaction/new-transaction';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,11 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     BudgetPage,
     TrackerPage,
     ProfilePage,
-    NewTransactionPage
+	NewTransactionPage
   ],
   imports: [
-    BrowserModule,
+	BrowserModule,
+	ComponentsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,7 +36,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     BudgetPage,
     TrackerPage,
     ProfilePage,
-    NewTransactionPage
+	NewTransactionPage
   ],
   providers: [
     StatusBar,

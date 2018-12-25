@@ -1,0 +1,61 @@
+.daily-budget {
+	box-shadow: $box-shadow-sm;
+	border-radius: .5rem;
+
+	&__header {
+		border-bottom: 1px solid $color-neutral-10;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__date,
+	&__amount {
+		color: $color-neutral-6;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	&__item {
+		padding: 1.2rem 0 1.2rem 1.5rem;
+
+		ion-icon {
+			align-items: center;
+			background: $color-primary-6;
+			border-radius: 100%;
+			color: $color-neutral-10;
+			display: flex;
+			height: 4.2rem;
+			justify-content: center;
+			padding: 1.2rem;
+			width: 4.2rem;
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-neutral-9;
+		}
+	}
+
+	&__item-details {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item-description {
+		color: $color-neutral-3;
+		font-size: $fs-18;
+		font-weight: 600;
+	}
+
+	&__item-amount {
+		font-size: $fs-18;
+		font-weight: 600;
+	}
+
+	&__item--success {
+		color: $color-primary-6;
+	}
+
+	&__item--danger {
+		color: $color-red-6;
+	}
+}

@@ -1,10 +1,27 @@
-<ion-header>
+<ion-content>
+	<div class="transaction-header">
+		<ion-icon name="close" class="close-btn" (click)="goBackPage()"></ion-icon>
+		<div text-center class="transaction-header__title">New Transaction</div>
+	</div>
 
-  <ion-icon name="close" style="font-size: 6rem; padding: 25px;" (click)="goBackPage()"></ion-icon>
+	<div class="amount">
+		<div class="amount__remaining">
+			<div class="amount__amount" text-center>$0</div>
+			<div class="amount__title" text-center>Amount</div>
+		</div>
+	</div>
 
-</ion-header>
+	<ion-card padding>
+		<ion-card-content>
+			<ion-list>
+					<ion-item>
+						<ion-input type="text" placeholder="Username"></ion-input>
+					</ion-item>
 
-
-<ion-content padding>
-
+					<ion-item>
+						<ion-input type="password" placeholder="Password"></ion-input>
+					</ion-item>
+				</ion-list>
+		</ion-card-content>
+	</ion-card>
 </ion-content>
