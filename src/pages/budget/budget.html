@@ -32,6 +32,7 @@
 		>Categories</div>
 	</div>
 
-	<daily-expense [expenses]="dailyExpenses"></daily-expense>
+	<daily-expense [expenses]="dailyExpenses" *ngIf="status"></daily-expense>
+	<div *ngIf="!status">This is the categories!!!</div>
 
 </ion-content>
