@@ -15,6 +15,10 @@ import { NewTransactionPage } from '../pages/new-transaction/new-transaction';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { ComponentsModule } from '../components/components.module';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { firebaseConfig } from './credentials';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +31,9 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
 	BrowserModule,
 	ComponentsModule,
-    IonicModule.forRoot(MyApp)
+	IonicModule.forRoot(MyApp),
+	AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
