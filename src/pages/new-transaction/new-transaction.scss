@@ -2,6 +2,10 @@ page-new-transaction {
 
 }
 
+.new-transaction {
+	background-color: $color-neutral-10;
+}
+
 .close-btn {
 	color: $color-white;
 	font-size: 5rem;
@@ -59,5 +63,65 @@ page-new-transaction {
 		color: #829AB1;
 		font-size: $fs-12;
 		text-transform: uppercase;
+	}
+
+}
+
+.transaction-card {
+	border-radius: .5rem;
+	transform: translateY(-50px);
+}
+
+.transaction-content {
+	padding: 0;
+
+	ion-icon {
+		color: $color-neutral-10;
+		font-size: $fs-24;
+
+		&::before {
+			align-items: center;
+			background-color: $color-primary-6;
+			border-radius: 10rem;
+			display: flex;
+			height: 3.5rem;
+			justify-content: center;
+			width: 3.5rem;
+		}
+	}
+
+	&__input {
+		::-webkit-input-placeholder {
+			font-weight: 600;
+		}
+	}
+}
+
+.transaction-btn__container {
+	display: flex;
+	justify-content: center;
+
+	.transaction-btn {
+		background-image: linear-gradient(to bottom, #F8D358, #C99A2E);
+		border-radius: 4rem;
+		font-size: 2rem;
+		font-weight: 600;
+		margin-top: 16rem;
+		padding: 2rem 7rem;
+		text-transform: uppercase;
+	}
+}
+
+.list-ios > .item-block:first-child {
+	border-top: none;
+}
+
+.list-ios {
+	ion-item {
+		padding: 1rem 2rem;
+	}
+
+	ion-item:not(:last-of-type) {
+		border-bottom: 1px solid $color-neutral-10;
 	}
 }
