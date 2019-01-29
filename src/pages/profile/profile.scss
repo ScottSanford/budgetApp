@@ -1,3 +1,76 @@
 page-profile {
 
 }
+
+.profile-page {
+	background-color: $color-neutral-10;
+}
+
+.profile-header {
+	background-image: linear-gradient(to bottom, $color-primary-6, $color-primary-2);
+	height: 25%;
+	color: #F0F4F8;
+
+	&__title {
+		font-size: $fs-20;
+		font-weight: bold;
+		padding: 5rem;
+	}
+}
+
+.profile-card {
+    align-items: center;
+	border-radius: 5px;
+    display: flex;
+	flex-direction: column;
+	margin-top: -3rem;
+	overflow: visible;
+
+	&__avatar {
+		height: 12.5rem;
+		width: 12.5rem;
+		border-radius: 25rem;
+		border: 3px solid $color-neutral-10;
+		margin-top: -6rem;
+	}
+
+	&__name {
+		color: $color-primary-1;
+		font-size: $fs-20;
+		font-weight: 600;
+	}
+
+	&__location {
+		color: $color-neutral-6;
+		font-size: $fs-16;
+	}
+}
+
+.profile-meta {
+	border-radius: .5rem;
+}
+
+.profile-content {
+	padding: 0;
+
+	ion-icon {
+		color: $color-neutral-10;
+		font-size: $fs-24;
+
+		&::before {
+			align-items: center;
+			background-color: $color-primary-6;
+			border-radius: 10rem;
+			display: flex;
+			height: 3.5rem;
+			justify-content: center;
+			width: 3.5rem;
+		}
+	}
+
+	&__input {
+		::-webkit-input-placeholder {
+			font-weight: 600;
+		}
+	}
+}

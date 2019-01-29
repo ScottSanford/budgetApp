@@ -8,7 +8,7 @@ budget-overview {
 		display: flex;
 		height: 12.5rem;
 
-		&__remaining, &__daily {
+		&__expenses, &__daily {
 			display: flex;
 			flex: 50%;
 			flex-direction: column;

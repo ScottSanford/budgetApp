@@ -1,21 +1,21 @@
 .page-budget {
-  background-color: #D9E2EC;
+  background-color: $color-neutral-9;
 }
 
 .budget-header {
-	background-image: linear-gradient(to bottom, #3EBD93, #0C6B58);
-	color: #F0F4F8;
+	background-image: linear-gradient(to bottom, $color-primary-6, $color-primary-2);
+	color: $color-neutral-10;
 	height: 35%;
 
 	&__title {
 		font-size: $fs-20;
 		font-weight: bold;
-		padding-top: 25px;
+		padding-top: 2.5rem;
 	}
 }
 
 .balance {
-	margin-top: 40px;
+	margin-top: 4rem;
 
 	&__amount {
 		font-size: $fs-48;
@@ -24,7 +24,7 @@
 
 	&__subtitle {
     	font-size: $fs-14;
-    	margin-top: 10px;
+    	margin-top: 1rem;
     	text-transform: uppercase;
   	}
 }
@@ -38,7 +38,7 @@
   font-weight: 600;
   height: 4rem;
   justify-content: space-around;
-  margin: 100px 16px 0 16px;
+  margin: 7.5rem 1.6rem 2.5rem 1.6rem;
   text-transform: uppercase;
 
   &__tab {

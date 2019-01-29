@@ -10,13 +10,13 @@ page-new-transaction {
 	color: $color-white;
 	font-size: 5rem;
 	position: absolute;
-	top: 15px;
-	left: 15px;
+	top: 1.5rem;
+	left: 1.5rem;
 }
 
 .transaction-header {
 	background-image: linear-gradient(to bottom, $color-blue-6, $color-blue-2);
-	color: #F0F4F8;
+	color: $color-neutral-10;
 	height: 25%;
 
 	&__title {
@@ -60,7 +60,7 @@ page-new-transaction {
 	}
 
 	&__title {
-		color: #829AB1;
+		color: $color-neutral-6;
 		font-size: $fs-12;
 		text-transform: uppercase;
 	}
@@ -102,7 +102,7 @@ page-new-transaction {
 	justify-content: center;
 
 	.transaction-btn {
-		background-image: linear-gradient(to bottom, #F8D358, #C99A2E);
+		background-image: linear-gradient(to bottom, $color-yellow-8, $color-yellow-4);
 		border-radius: 4rem;
 		font-size: 2rem;
 		font-weight: 600;
@@ -110,10 +110,6 @@ page-new-transaction {
 		padding: 2rem 7rem;
 		text-transform: uppercase;
 	}
-}
-
-.list-ios > .item-block:first-child {
-	border-top: none;
 }
 
 .list-ios {
